@@ -11,6 +11,18 @@
   </head>
 
   <body>
+  <%= button_to(
+        "Log in",
+        new_user_session_path,
+        method: :get     
+         ) %>
+         <br>
+<%= button_to(
+        "Log out",
+        destroy_user_session_path,
+        method: :delete
+      ) %>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <h3>Welcome!</h3> <%= current_user.try(:email) %>
